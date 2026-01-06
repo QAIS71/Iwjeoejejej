@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Space Selfie AI - Real Human Interaction</title>
+    
+    <!-- Google AdSense Main Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3301550897459453"
+     crossorigin="anonymous"></script>
+     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -15,6 +20,9 @@
         .loading-bar-inner { height: 100%; background: linear-gradient(90deg, #2563eb, #60a5fa); width: 0%; transition: width 0.1s linear; }
         .shimmer { background: linear-gradient(90deg, #111, #222, #111); background-size: 200% 100%; animation: shimmer 2s infinite; }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        
+        /* Custom Ad Container Styling to prevent layout shifts */
+        .ad-container { display: flex; justify-content: center; align-items: center; overflow: hidden; background: rgba(255,255,255,0.02); border-radius: 12px; }
     </style>
 </head>
 <body class="ltr" id="appBody">
@@ -53,9 +61,18 @@
 
     <main class="max-w-6xl mx-auto px-6 py-8">
         
-        <!-- Header Ad Slot -->
-        <div class="w-full h-24 bg-white/5 border border-white/5 rounded-2xl mb-8 flex items-center justify-center text-[10px] text-white/20 tracking-[1em] shimmer">
-            LEADERBOARD AD SPACE (728x90)
+        <!-- ================= HEADER AD (Leaderboard) ================= -->
+        <div class="w-full min-h-[90px] bg-white/5 border border-white/5 rounded-2xl mb-8 flex items-center justify-center ad-container p-2">
+            <!-- استبدل data-ad-slot بالرقم الخاص بوحدتك الإعلانية -->
+            <ins class="adsbygoogle"
+                 style="display:block; width: 100%; text-align:center;"
+                 data-ad-client="ca-pub-3301550897459453"
+                 data-ad-slot="YOUR_HEADER_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -94,10 +111,20 @@
                     </button>
                 </div>
 
+                <!-- ================= SIDEBAR AD (Rectangle) ================= -->
                 <div class="bg-white/5 p-4 rounded-2xl border border-white/10 text-center">
                     <p class="text-[9px] text-white/30 uppercase tracking-widest mb-2">Sponsored Content</p>
-                    <div class="h-48 bg-black/50 rounded-xl flex items-center justify-center text-[10px] text-white/10">
-                        NATIVE AD SLOT (300x250)
+                    <div class="min-h-[250px] bg-black/50 rounded-xl flex items-center justify-center overflow-hidden">
+                        <!-- استبدل data-ad-slot بالرقم الخاص بوحدتك الإعلانية -->
+                        <ins class="adsbygoogle"
+                             style="display:block; width: 100%;"
+                             data-ad-client="ca-pub-3301550897459453"
+                             data-ad-slot="YOUR_SIDEBAR_AD_SLOT_ID"
+                             data-ad-format="rectangle"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     </div>
                 </div>
             </div>
@@ -115,8 +142,18 @@
                             <h3 id="loadingText" class="text-2xl font-black mb-2 italic">Transmitting data to orbit...</h3>
                             <p class="text-blue-400 text-xs font-bold" id="timerCount">20s Remaining</p>
                         </div>
-                        <div class="mt-12 w-full h-40 bg-white/5 border border-white/5 rounded-2xl flex items-center justify-center text-[8px] text-white/10">
-                            IN-PROCESS AD SPACE
+                        
+                        <!-- ================= LOADING SCREEN AD ================= -->
+                        <div class="mt-12 w-full min-h-[100px] bg-white/5 border border-white/5 rounded-2xl flex items-center justify-center overflow-hidden p-2">
+                             <ins class="adsbygoogle"
+                                 style="display:block; width: 100%; text-align:center;"
+                                 data-ad-client="ca-pub-3301550897459453"
+                                 data-ad-slot="YOUR_LOADING_AD_SLOT_ID"
+                                 data-ad-format="horizontal"
+                                 data-full-width-responsive="true"></ins>
+                            <script>
+                                 (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
                         </div>
                     </div>
 
@@ -129,8 +166,16 @@
                         <img id="finalImg" src="" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black p-10 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all">
                             
-                            <div class="mb-6 h-16 bg-white/10 rounded-xl border border-white/10 flex items-center justify-center text-[8px] text-white/40 uppercase">
-                                Pre-Download Ad Space
+                            <!-- ================= RESULT VIEW AD ================= -->
+                            <div class="mb-6 min-h-[60px] bg-white/10 rounded-xl border border-white/10 flex items-center justify-center overflow-hidden">
+                                <ins class="adsbygoogle"
+                                     style="display:block; width: 100%; height: 100%; text-align:center;"
+                                     data-ad-client="ca-pub-3301550897459453"
+                                     data-ad-slot="YOUR_RESULT_AD_SLOT_ID"
+                                     data-ad-format="horizontal"></ins>
+                                <script>
+                                     (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
                             </div>
 
                             <button onclick="downloadImage()" class="w-full py-5 bg-white text-black font-black rounded-2xl flex items-center justify-center gap-3 hover:scale-[1.02] transition">
@@ -140,9 +185,33 @@
                     </div>
                 </div>
 
+                <!-- ================= FOOTER ADS ================= -->
                 <div class="mt-8 flex gap-4">
-                    <div class="flex-1 bg-white/5 h-20 rounded-2xl border border-white/5 flex items-center justify-center text-[9px] text-white/20">FOOTER AD 1</div>
-                    <div class="flex-1 bg-white/5 h-20 rounded-2xl border border-white/5 flex items-center justify-center text-[9px] text-white/20">FOOTER AD 2</div>
+                    <div class="flex-1 bg-white/5 min-h-[90px] rounded-2xl border border-white/5 flex items-center justify-center overflow-hidden p-1">
+                        <!-- Footer Ad 1 -->
+                        <ins class="adsbygoogle"
+                             style="display:block; width: 100%;"
+                             data-ad-client="ca-pub-3301550897459453"
+                             data-ad-slot="YOUR_FOOTER1_AD_SLOT_ID"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                    
+                    <div class="flex-1 bg-white/5 min-h-[90px] rounded-2xl border border-white/5 flex items-center justify-center overflow-hidden p-1">
+                        <!-- Footer Ad 2 -->
+                        <ins class="adsbygoogle"
+                             style="display:block; width: 100%;"
+                             data-ad-client="ca-pub-3301550897459453"
+                             data-ad-slot="YOUR_FOOTER2_AD_SLOT_ID"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
                 </div>
             </div>
 
@@ -154,11 +223,11 @@
     </footer>
 
     <script>
-        const API_KEY = "AIzaSyDiLXYzi0Zi3LbgVsDpuETrSvqi6dXXiU0"; // System will inject the key automatically
+        const API_KEY = ""; // System will inject the key automatically
         let currentLang = 'en'; 
         let currentRegion = 0;
         let userImageBase64 = null;
-        let userImageMimeType = null; // Variable to store the correct mime type
+        let userImageMimeType = null; 
 
         const languages = {
             en: { title: "Realistic Space Selfie", sub: "Real astronaut capturing you inside ISS", upload: "Click to upload your portrait", btn: "Launch Now", regions: ["Middle East", "Europe", "Africa", "Asia", "Americas"], dl: "Download 8K Image", loading: ["Analyzing face...", "Preparing space suit...", "Adjusting orbit light...", "Capturing final shot..."], transmission: "Transmitting data to orbit...", remaining: "Remaining" },
@@ -198,7 +267,7 @@
         function handleFile(e) {
             const file = e.target.files[0];
             if(file) {
-                userImageMimeType = file.type; // Save the mime type
+                userImageMimeType = file.type;
                 const reader = new FileReader();
                 reader.onload = (ev) => {
                     document.getElementById('imgPreview').src = ev.target.result;
@@ -219,7 +288,7 @@
             const statusTxt = document.getElementById('loadingText');
             
             overlay.classList.remove('hidden');
-            let timeLeft = 20; // 20 Seconds waiting simulation
+            let timeLeft = 20; 
             let progress = 0;
             const t = languages[currentLang] || languages['en'];
 
@@ -248,9 +317,7 @@
             const prompt = `A hyper-realistic 8K first-person perspective or close-up inside the ISS Cupola module. A real astronaut in a detailed white space suit is visible, his hands are holding up a professional tablet or a physical high-res photograph showing the face from this image. The astronaut's gloved hand is clearly visible, making it look 100% real and tangible. The background through the glass shows a breathtaking Earth over ${region}. Natural cinematic lighting, space station interior details, zero AI artifacts, looks like a real memory captured in orbit.`;
 
             try {
-                // IMPORTANT: Using 'gemini-2.5-flash-image-preview' for image editing/generation
-                // Using dynamic MIME type instead of hardcoded 'image/png'
-               const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${API_KEY}`, {
+               const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${API_KEY}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -260,6 +327,7 @@
                                 { inlineData: { mimeType: userImageMimeType || "image/png", data: userImageBase64 } }
                             ]
                         }],
+                        generationConfig: { responseModalities: ['TEXT', 'IMAGE'] }
                     })
                 });
 
@@ -268,17 +336,13 @@
                 }
 
                 const data = await response.json();
-                
-                // Debugging: Log full response to see safety ratings
                 console.log("Full API Response:", data);
 
-                // Check for safety finish reason
                 const candidate = data.candidates?.[0];
                 if (candidate?.finishReason === 'SAFETY') {
                      throw new Error(currentLang === 'ar' ? "تم حظر الصورة بواسطة فلاتر الأمان. الرجاء تجربة صورة مختلفة." : "Image blocked by safety filters. Please try a different photo.");
                 }
 
-                // Check if we have a valid image candidate
                 const img = candidate?.content?.parts?.find(p => p.inlineData)?.inlineData?.data;
 
                 if(img) {
@@ -309,4 +373,3 @@
     </script>
 </body>
 </html>
-
