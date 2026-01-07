@@ -58,12 +58,12 @@
 
     <main class="max-w-6xl mx-auto px-6 py-8">
         
-        <!-- [AD SLOT 1] Header Leaderboard -->
+        <!-- [AD SLOT 1] Header Banner - Space 1 -->
         <div class="w-full min-h-[90px] bg-white/5 border border-white/5 rounded-2xl mb-8 text-center overflow-hidden block">
              <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-3301550897459453"
-             data-ad-slot="YOUR_AD_SLOT_ID"
+             data-ad-slot="YOUR_AD_SLOT_1"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
             <script>
@@ -73,6 +73,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
             
+            <!-- Controls (Left) -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="glass p-8 rounded-[40px] shadow-2xl relative overflow-hidden">
                     <div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
@@ -105,26 +106,13 @@
                         <span id="txt-btn">Launch Now</span>
                     </button>
                 </div>
-
-                <div class="bg-white/5 p-4 rounded-2xl border border-white/10 text-center min-h-[280px]">
-                    <p class="text-[9px] text-white/30 uppercase tracking-widest mb-2">Sponsored Content</p>
-                    <div class="w-full h-full text-center overflow-hidden block">
-                        <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-3301550897459453"
-                        data-ad-slot="YOUR_AD_SLOT_ID"
-                        data-ad-format="rectangle"
-                        data-full-width-responsive="true"></ins>
-                       <script>
-                           (adsbygoogle = window.adsbygoogle || []).push({});
-                       </script>
-                    </div>
-                </div>
             </div>
 
+            <!-- Display (Right) -->
             <div class="lg:col-span-7">
                 <div id="displayFrame" class="bg-[#0a0a0f] border border-white/10 rounded-[50px] aspect-square relative overflow-hidden shadow-2xl flex items-center justify-center">
                     
+                    <!-- Timer/Loading Overlay -->
                     <div id="loadingOverlay" class="hidden absolute inset-0 bg-[#050508]/95 z-30 flex flex-col items-center justify-center p-12 text-center">
                         <div class="w-full max-w-sm">
                             <div class="loader-container h-1.5 w-full bg-white/5 rounded-full mb-6 overflow-hidden">
@@ -150,11 +138,12 @@
                     </div>
                 </div>
 
+                <!-- [AD SLOT 2] Bottom Banner - Space 2 -->
                 <div class="mt-8 bg-white/5 min-h-[100px] rounded-2xl border border-white/5 text-center overflow-hidden block">
                     <ins class="adsbygoogle"
                     style="display:block"
                     data-ad-client="ca-pub-3301550897459453"
-                    data-ad-slot="YOUR_AD_SLOT_ID"
+                    data-ad-slot="YOUR_AD_SLOT_2"
                     data-ad-format="auto"
                     data-full-width-responsive="true"></ins>
                    <script>
@@ -171,7 +160,7 @@
     </footer>
 
     <script>
-        const apiKey = ""; // API Key will be handled by the environment
+        const apiKey = ""; 
         let currentLang = 'en'; 
         let currentRegion = 0;
         let userImageBase64 = null;
@@ -181,7 +170,19 @@
             en: { title: "Realistic Space Selfie", sub: "Real astronaut capturing you inside ISS", upload: "Click to upload your portrait", btn: "Launch Now", regions: ["Middle East", "Europe", "Africa", "Asia", "Americas"], dl: "Download 8K Image", loading: ["Analyzing face...", "Preparing space suit...", "Adjusting orbit light...", "Capturing final shot..."], transmission: "Transmitting data to orbit...", remaining: "Remaining" },
             ar: { title: "سيلفي الفضاء الواقعي", sub: "رائد فضاء حقيقي يصورك داخل محطة ISS", upload: "اضغط لرفع صورتك الشخصية", btn: "إقلاع الآن", regions: ["الشرق الأوسط", "أوروبا", "أفريقيا", "آسيا", "الأمريكتين"], dl: "تحميل الصورة 8K", loading: ["تحليل الوجه...", "تجهيز بدلة الفضاء...", "ضبط إضاءة المدار...", "التقاط الصورة النهائية..."], transmission: "جاري إرسال البيانات للمدار...", remaining: "متبقي" },
             zh: { title: "写实太空自拍", sub: "宇航员在国际空间站为您拍照", upload: "点击上传照片", btn: "立即转换", regions: ["中东", "欧洲", "非洲", "亚洲", "美洲"], dl: "下载 8K 图片", loading: ["分析面部...", "准备宇航服...", "调整轨道光线...", "拍摄最终样张..."], transmission: "数据传输至轨道...", remaining: "剩余" },
-            ko: { title: "사실적인 우주 셀카", sub: "ISS 내부의 100% 사실적인 시뮬레이شن", upload: "사진 업로드", btn: "지금 발사", loading: ["체हरा विश्लेषण...", "सूट तैयार करना...", "लाइटिंग सेट करना...", "फोटो खींचنا..."], regions: ["중동", "유럽", "아프리카", "아시아", "아메리카"], dl: "8K 이미지 다운로드", transmission: "궤도로 데이터 전송 중...", remaining: "남음" }
+            ko: { title: "사실적인 우주 셀카", sub: "ISS 내부의 100% 사실적인 시뮬레이شن", upload: "사진 업로드", btn: "지금 발사", regions: ["중동", "유럽", "아프리카", "아시아", "아메리카"], dl: "8K 이미지 다운로드", transmission: "궤도로 데이터 전송 중...", remaining: "남음" },
+            ja: { title: "リアルな宇宙自撮り", sub: "ISS内部で宇宙飛行士があなたを撮影", upload: "写真をアップロード", btn: "今すぐ起動", regions: ["中東", "ヨーロッパ", "アフリカ", "アジア", "アメリカ"], dl: "8K画像をダウンロード", transmission: "データを軌道に送信中...", remaining: "残り" },
+            hi: { title: "यथार्थवादी अंतरिक्ष सेल्फी", sub: "ISS के अंदर असली अंतरिक्ष यात्री आपको कैप्चर कर रहे हैं", upload: "अपना चित्र अपलोड करें", btn: "अभी लॉन्च करें", regions: ["मध्य पूर्व", "यूरोप", "अफ्रीका", "एशिया", "अमेरिका"], dl: "8K छवि डाउनलोड करें", transmission: "डेटा कक्षा में भेज रहा है...", remaining: "शेष" },
+            es: { title: "Selfie Espacial Realista", sub: "Astronauta real capturándote en la ISS", upload: "Subir tu retrato", btn: "Lanzar ahora", regions: ["Medio Oriente", "Europa", "África", "Asia", "Américas"], dl: "Descargar imagen 8K", transmission: "Transmitiendo datos a órbita...", remaining: "Restante" },
+            fr: { title: "Selfie Spatial Réaliste", sub: "Un vrai astronaute vous capture dans l'ISS", upload: "Télécharger votre portrait", btn: "Lancer maintenant", regions: ["Moyen-Orient", "Europe", "Afrique", "Asie", "Amériques"], dl: "Télécharger l'image 8K", transmission: "Transmission des données en orbite...", remaining: "Restant" },
+            de: { title: "Realistisches Weltraum-Selfie", sub: "Echter Astronaut fängt dich in der ISS ein", upload: "Porträt hochladen", btn: "Jetzt starten", regions: ["Naher Osten", "Europa", "Afrika", "Asien", "Amerika"], dl: "8K-Bild herunterladen", transmission: "Daten in den Orbit senden...", remaining: "Verbleibend" },
+            ru: { title: "Реалистичное космическое селфи", sub: "Настоящий астронавт снимает вас внутри МКС", upload: "Загрузить портрет", btn: "Запустить сейчас", regions: ["Ближний Восток", "Европа", "Африка", "Азия", "Америка"], dl: "Скачать 8K изображение", transmission: "Передача данных на орбиту...", remaining: "Осталось" },
+            pt: { title: "Selfie Espacial Realista", sub: "Astronauta real capturando você na ISS", upload: "Carregar seu retrato", btn: "Lançar agora", regions: ["Oriente Médio", "Europa", "África", "Ásia", "Américas"], dl: "Baixar imagem 8K", transmission: "Transmitindo dados para a órbita...", remaining: "Restante" },
+            tr: { title: "Gerçekçi Uzay Özçekimi", sub: "Gerçek astronot sizi ISS içinde çekiyor", upload: "Fotoğraf yükle", btn: "Şimdi başlat", regions: ["Orta Doğu", "Avrupa", "Afrika", "Asya", "Amerika"], dl: "8K resmi indir", transmission: "Veriler yörüngeye iletiliyor...", remaining: "Kaldı" },
+            it: { title: "Selfie Spaziale Realistico", sub: "Vero astronauta che ti cattura nell'ISS", upload: "Carica il tuo ritratto", btn: "Lancia ora", regions: ["Medio Oriente", "Europa", "Africa", "Asia", "Americhe"], dl: "Scarica immagine 8K", transmission: "Trasmissione dati in orbita...", remaining: "Rimanente" },
+            vi: { title: "Ảnh tự sướng không gian thực tế", sub: "Phi hành gia thật chụp bạn trong ISS", upload: "Tải ảnh chân dung", btn: "Bắt đầu ngay", regions: ["Trung Đông", "Châu Âu", "Châu Phi", "Châu Á", "Châu Mỹ"], dl: "Tải ảnh 8K", transmission: "Đang truyền dữ liệu lên quỹ đạo...", remaining: "Còn lại" },
+            th: { title: "เซลฟี่อวกาศที่สมจริง", sub: "นักบินอวกาศตัวจริงถ่ายคุณใน ISS", upload: "อัปโหลดภาพของคุณ", btn: "เริ่มตอนนี้", regions: ["ตะวันออกกลาง", "ยุโรป", "แอฟริกา", "เอเชีย", "อเมริกา"], dl: "ดาวน์โหลดภาพ 8K", transmission: "กำลังส่งข้อมูลไปยังวงโคจร...", remaining: "เหลือ" },
+            id: { title: "Selfie Luar Angkasa Realistis", sub: "Astronot asli memotret Anda di dalam ISS", upload: "Unggah potret Anda", btn: "Luncurkan Sekarang", regions: ["Timur Tengah", "Eropa", "Afrika", "Asia", "Amerika"], dl: "Unduh Gambar 8K", transmission: "Mengirim data ke orbit...", remaining: "Tersisa" }
         };
 
         function updateLanguage() {
@@ -229,12 +230,7 @@
 
         async function startGeneration() {
             if(!userImageBase64) return alert(currentLang === 'ar' ? "الرجاء رفع صورة أولاً!" : "Upload photo first!");
-            
             const overlay = document.getElementById('loadingOverlay');
-            const pBar = document.getElementById('pBar');
-            const timerTxt = document.getElementById('timerCount');
-            const statusTxt = document.getElementById('loadingText');
-            
             overlay.classList.remove('hidden');
             let timeLeft = 20; 
             let progress = 0;
@@ -242,15 +238,10 @@
 
             const interval = setInterval(() => {
                 timeLeft -= 0.1;
-                progress += (100 / 200);
-                pBar.style.width = `${progress}%`;
-                timerTxt.innerText = `${Math.ceil(timeLeft)}s ${t.remaining}`;
+                progress += 0.5;
+                document.getElementById('pBar').style.width = `${progress}%`;
+                document.getElementById('timerCount').innerText = `${Math.ceil(timeLeft)}s ${t.remaining}`;
                 
-                if(progress > 75) statusTxt.innerText = t.loading[3];
-                else if(progress > 50) statusTxt.innerText = t.loading[2];
-                else if(progress > 25) statusTxt.innerText = t.loading[1];
-                else statusTxt.innerText = t.loading[0];
-
                 if(timeLeft <= 0) {
                     clearInterval(interval);
                     executeAI();
@@ -262,25 +253,10 @@
             const t = languages[currentLang] || languages['en'];
             const region = t.regions[currentRegion];
             
-            const prompt = `A hyper-realistic 8K first-person perspective or close-up inside the ISS Cupola module. A real astronaut in a detailed white space suit is visible, his hands are holding up a professional tablet or a physical high-res photograph showing the face from this image. The astronaut's gloved hand is clearly visible, making it look 100% real and tangible. The background through the glass shows a breathtaking Earth over ${region}. Natural cinematic lighting, space station interior details, zero AI artifacts, looks like a real memory captured in orbit.`;
-
-            // Implementation of exponential backoff for API calls
-            const callWithRetry = async (url, options, retries = 5, delay = 1000) => {
-                for (let i = 0; i < retries; i++) {
-                    try {
-                        const response = await fetch(url, options);
-                        if (response.ok) return response;
-                        if (response.status !== 429 && response.status < 500) break; 
-                    } catch (err) {}
-                    await new Promise(res => setTimeout(res, delay));
-                    delay *= 2;
-                }
-                return null;
-            };
+            const prompt = `A hyper-realistic 8K first-person perspective or close-up inside the ISS Cupola module. A real astronaut in a detailed white space suit is visible, his hands are holding up a physical high-res photograph showing the face from this image. The background through the glass shows a breathtaking Earth over ${region}. Natural cinematic lighting, space station interior details, zero AI artifacts, looks like a real memory captured in orbit.`;
 
             try {
-               const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`;
-               const response = await callWithRetry(url, {
+               const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image-preview:generateContent?key=${apiKey}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -292,19 +268,10 @@
                         }],
                         generationConfig: { responseModalities: ['TEXT', 'IMAGE'] }
                     })
-               });
-
-                if (!response) {
-                    throw new Error(currentLang === 'ar' ? "فشل الاتصال بالخدمة بعد عدة محاولات." : "Failed to connect to service after retries.");
-                }
+                });
 
                 const data = await response.json();
                 const candidate = data.candidates?.[0];
-
-                if (candidate?.finishReason === 'SAFETY') {
-                     throw new Error(currentLang === 'ar' ? "تم حظر المحتوى بواسطة فلاتر الأمان." : "Content blocked by safety filters.");
-                }
-
                 const img = candidate?.content?.parts?.find(p => p.inlineData)?.inlineData?.data;
 
                 if(img) {
@@ -312,12 +279,12 @@
                     document.getElementById('resultView').classList.remove('hidden');
                     document.getElementById('emptyView').classList.add('hidden');
                 } else {
-                    throw new Error(currentLang === 'ar' ? "لم يتم توليد الصورة." : "No image generated.");
+                    throw new Error("No image generated.");
                 }
 
             } catch(e) {
                 console.error(e);
-                alert(e.message);
+                alert(e.message || "Error");
             } finally {
                 document.getElementById('loadingOverlay').classList.add('hidden');
             }
